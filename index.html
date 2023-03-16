@@ -19,16 +19,31 @@
   <header>
     <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
       <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ms-2">gifted</span>
+
+        <span class="ms-2">🎁 Gifted</span>
       </a>
     </nav>
   </header>
   <main>
     <div class="container-fluid">
       <section class="row">
-        <div class="col-3"></div>
+        <div class="col-3">
+          <div class="row">
+            <form class="d-flex flex-wrap pt-3" onsubmit="app.giftSandboxController.newGift()">
+              <div class="mb-2 col-12">
+                <label for="tag">Tag</label>
+                <input type="text" name="tag" id="tag" class="form-control" required minlength="3" maxlength="30"
+                  placeholder="Your Memes Here...">
+              </div>
+              <div class="mb-2 col-12">
+                <label for="url">Url</label>
+                <input type="url" name="url" id="url" class="form-control" required
+                  placeholder="please enter a url for an image...">
+              </div>
+              <button class="btn btn-success mt-3" type="submit" title="create report">Submit</button>
+            </form>
+          </div>
+        </div>
         <div class="col-9">
           <!-- SECTION all gifts here -->
           <section id="gifts" class="row mt-3">
